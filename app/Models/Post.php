@@ -16,4 +16,11 @@ class Post extends Model
             'is_active' => 'boolean'
         ];
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    protected $guarded = ['is_active'];
 }
